@@ -67,3 +67,5 @@
 	$preference->external_reference = "ABCD1234";
 
 	$preference->save();
+
+	var_dump($preference);
