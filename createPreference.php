@@ -15,7 +15,7 @@
 	$item = new MercadoPago\Item();
 	$item->id = "1234";
 	$item->title = $_POST['title'];
-	$item->description = "Dispositivo móvil de Tienda e-commerce";
+	$item->description = "Dispositivo mÃ³vil de Tienda e-commerce";
 	$item->picture_url = $basedir . '/' . str_replace('./', '', $_POST['img']);
 	$item->quantity = intval($_POST['unit']);
 	$item->unit_price = floatval($_POST['price']);
