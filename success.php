@@ -83,6 +83,7 @@
 										Collection id: <strong><?php echo $_GET['collection_id']; ?></strong><br />
 										Collection status: <strong><?php echo $_GET['collection_status']; ?></strong><br />
 										Merchant order ID: <strong><?php echo $_GET['merchant_order_id']; ?></strong>
+                                        Monto compra: <strong><?php echo $_GET['payment']["response"]["transaction_amount"]; ?></strong>
 									</p>
 									<p>
 										¡Gracias por comprar con nosotros!
