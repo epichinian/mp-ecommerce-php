@@ -3,3 +3,5 @@
 	$f = fopen('raw.txt', 'a');
 	fwrite($f, $data);
 	fclose($f);
+
+	var_dump($_POST);
