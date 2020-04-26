@@ -15,7 +15,7 @@
 	$item = new MercadoPago\Item();
 	$item->id = "1234";
 	$item->title = $_POST['title'];
-	$item->description = "Dispositivo mÃ³vil de Tienda e-commerce";
+	$item->description = "Dispositivo móvil de Tienda e-commerce";
 	$item->picture_url = $basedir . '/' . str_replace('./', '', $_POST['img']);
 	$item->quantity = intval($_POST['unit']);
 	$item->unit_price = floatval($_POST['price']);
@@ -43,24 +43,24 @@
 
 	// Excluir pagos
 	$preference->payment_methods = array(
-		'excluded_payment_methods'=>array(
-			array('id'=>'amex'),
+		'excluded_payment_methods' => array(
+			array('id' => 'amex'),
 		),
-		'excluded_payment_types'=>array(
-			array('id'=>'atm'),
+		'excluded_payment_types'=> array(
+			array('id' => 'atm'),
 		),
-		'installments'=>6
+		'installments' => 6
 	);
 
 	// Back urls
 	$preference->back_urls = array(
-		'failure'=>"$basedir/failure.php",
-		'pending'=>"$basedir/pending.php",
-		'success'=>"$basedir/success.php"
+		'failure' => "$basedir/failure.php",
+		'pending' => "$basedir/pending.php",
+		'success' => "$basedir/success.php"
 	);
 
 	// Notification URL
-	$preference->notification_url = "$basedir/log.php";
+	$preference->notification_url = "$basedir/notification.php";
 	
 	// Configurar preferencia
 	$preference->auto_return = "approved";
