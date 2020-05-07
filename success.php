@@ -1,3 +1,23 @@
+<?php
+
+MercadoPago\SDK::setAccessToken("APP_USR-6317427424180639-042414-47e969706991d3a442922b0702a0da44-469485398");
+
+switch($_POST["type"]) {
+    case "payment":
+        $payment = MercadoPago\Payment.find_by_id($_POST["id"]);
+        break;
+    case "plan":
+        $plan = MercadoPago\Plan.find_by_id($_POST["id"]);
+        break;
+    case "subscription":
+        $plan = MercadoPago\Subscription.find_by_id($_POST["id"]);
+        break;
+    case "invoice":
+        $plan = MercadoPago\Invoice.find_by_id($_POST["id"]);
+        break;
+}
+?>
+
 <!DOCTYPE html>
 <html class="supports-animation supports-columns svg no-touch no-ie no-oldie no-ios supports-backdrop-filter as-mouseuser" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
@@ -74,10 +94,12 @@
 								
 									<p> Tus datos de compra son: </p>
 									<p>
-										Payment method: <strong><?php echo $_GET['payment_type']; ?></strong><br /> 
-										Collection id: <strong><?php echo $_GET['collection_id']; ?></strong><br />
-										Collection status: <strong><?php echo $_GET['collection_status']; ?></strong><br />
-										Merchant order ID: <strong><?php echo $_GET['merchant_order_id']; ?></strong>
+                                        Método de pago: <strong><?php echo $_GET['payment_method_id']; ?></strong><br /> 
+										Monto pagado: <strong><?php echo $_GET['transaction_amount']; ?></strong><br />
+										Id Pago Mercado Pago: <strong><?php echo $_GET['id']; ?></strong><br />
+                                        Preference id: <strong><?php echo $_GET['preference_id']; ?></strong><br />
+										Número de orden del pedido: <strong><?php echo $_GET['external_reference']; ?></strong>
+
 									</p>
 									</button>
                                 </div>
