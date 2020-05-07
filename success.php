@@ -97,7 +97,7 @@ switch($_POST["type"]) {
                                         Método de pago: <strong><?php echo $_GET['payment_method_id']; ?></strong><br /> 
 										Monto pagado: <strong><?php echo $_GET['transaction_amount']; ?></strong><br />
 										Id Pago Mercado Pago: <strong><?php echo $_GET['id']; ?></strong><br />
-                                        Preference id: <strong><?php echo $_GET['preference_id']; ?></strong><br />
+                                        
 										Número de orden del pedido: <strong><?php echo $_GET['external_reference']; ?></strong>
 
 									</p>
